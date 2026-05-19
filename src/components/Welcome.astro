@@ -1,6 +1,7 @@
 ---
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
+import { Button } from "@/components/ui/button";
 ---
 
 <!-- Include this script tag or install `@tailwindplus/elements` via npm: --><!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
@@ -45,15 +46,24 @@ import background from "../assets/background.svg";
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
-        <a href="/products" class="text-sm/6 font-semibold text-white">Product</a>
+        <a href="/products" class="text-sm/6 font-semibold text-white"
+          >Product</a
+        >
         <a href="#" class="text-sm/6 font-semibold text-white">Features</a>
         <a href="#" class="text-sm/6 font-semibold text-white">Marketplace</a>
         <a href="#" class="text-sm/6 font-semibold text-white">Company</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/auth" class="text-sm/6 font-semibold text-white"
+        <!-- <a href="/auth" class="text-sm/6 font-semibold text-white"
           >Log in <span aria-hidden="true">&rarr;</span></a
-        >
+        > -->
+        <a href="/auth">
+          <Button
+            className="rounded-lg transition duration-200 hover:bg-gray-700 hover:scale-105"
+          >
+            Log in
+          </Button>
+        </a>
       </div>
     </nav>
     <el-dialog>
