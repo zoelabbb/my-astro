@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  astro-fe:
+    build: .
+
+    container_name: astro-fe
+
+    restart: unless-stopped
+
+    expose:
+      - "4321"
+
+    labels:
+      - "traefik.enable=true"
+
+      - "traefik.http.routers.fe.rule=Host(`astro.ryulabs.my.id`)"
+      - "traefik.http.routers.fe.entrypoints=websecure"
+      - "traefik.http.routers.fe.tls=true"
+
+      - "traefik.http.services.fe.loadbalancer.server.port=4321"
+
+    networks:
+      - traefik-network
+
+networks:
+  traefik-network:
+    external: true
