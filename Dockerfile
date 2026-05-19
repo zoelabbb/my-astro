@@ -11,4 +11,4 @@ RUN npm run build
 
 EXPOSE 4321
 
-CMD ["npm", "run", "dist/index.html", "--", "--host"]
+CMD ["npm", "run", "preview", "--", "--host"]
