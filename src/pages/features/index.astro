@@ -1,0 +1,423 @@
+---
+import Layout from "@/src/layouts/Layout.astro";
+import Footer from "@/src/components/Footer.astro";
+import { Button } from "@/components/ui/button";
+import "../../styles/global.css";
+---
+
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features - RyuLabs</title>
+    <meta
+      name="description"
+      content="Fitur-fitur canggih RyuLabs untuk memperkaya bisnis online Anda."
+    />
+
+    <!-- Tailwind CSS CDN + konfigurasi dasar -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom styling untuk meniru persis style home page -->
+    <style>
+      body {
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      /* Efek transisi untuk kartu dan tombol */
+      .card-hover {
+        transition: all 0.2s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.05),
+          0 10px 10px -5px rgba(0, 0, 0, 0.01);
+      }
+      .gradient-text {
+        background: linear-gradient(to right, #3b82f6, #a855f7);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <!-- Navigation Bar - Mirip persis dengan home -->
+    <nav
+      class="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="text-2xl font-bold">
+          <span class="gradient-text">RyuLabs</span>
+        </div>
+
+        <!-- Menu Tengah -->
+        <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+          <a href="/" class="hover:text-gray-900 transition">Product</a>
+          <a
+            href="/features"
+            class="text-gray-900 font-semibold border-b-2 border-blue-500 pb-1"
+            >Features</a
+          >
+          <a href="#" class="hover:text-gray-900 transition">Marketplace</a>
+          <a href="#" class="hover:text-gray-900 transition">Company</a>
+        </div>
+
+        <!-- Tombol Login -->
+        <div>
+          <a
+            href="#"
+            class="text-gray-600 hover:text-gray-900 transition font-medium"
+          >
+        <Button>LOGIN</Button>  
+        </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section Features -->
+    <section class="py-20 px-6 text-center">
+      <div class="container mx-auto max-w-3xl">
+        <h1
+          class="text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent"
+        >
+          Fitur untuk
+          <span class="gradient-text">Bisnis Online</span>
+        </h1>
+        <p class="text-xl text-gray-500 mt-6 leading-relaxed">
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+          cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
+        </p>
+        <div class="flex gap-4 justify-center mt-8">
+          <a
+            href="#"
+            class="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition shadow-sm"
+            >Get started</a
+          >
+          <a
+            href="#"
+            class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition"
+            >Learn more</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid Fitur Utama - 3 kolom, mirip gaya kartu home -->
+    <section class="py-12 px-6">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Fitur 1 -->
+          <div
+            class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-5 shadow-md"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Kinerja Cepat</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
+              Suspendisse eget egestas.
+            </p>
+          </div>
+
+          <!-- Fitur 2 -->
+          <div
+            class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-5 shadow-md"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Keamanan Data</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Morbi viverra dui mi arcu sed. Tellus semper adipiscing
+              suspendisse semper morbi.
+            </p>
+          </div>
+
+          <!-- Fitur 3 -->
+          <div
+            class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-5 shadow-md"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Terintegrasi</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
+              eget. Sem sodales.
+            </p>
+          </div>
+
+          <!-- Fitur 4 -->
+          <div
+            class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center mb-5 shadow-md"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">API Terbuka</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Quisque est vel vulputate cursus. Risus proin diam nunc commodo.
+              Lobortis auctor.
+            </p>
+          </div>
+
+          <!-- Fitur 5 -->
+          <div
+            class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center mb-5 shadow-md"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Analitik Real-time</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis
+              aliquet hac quis.
+            </p>
+          </div>
+
+          <!-- Fitur 6 -->
+          <div
+            class="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center mb-5 shadow-md"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Kolaborasi Tim</h3>
+            <p class="text-gray-500 leading-relaxed">
+              Id hac maecenas ac donec pharetra eget. Nisi aute in ad minim
+              nostrud adipisicing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Deploy faster / Statistik (seperti di home) -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Kiri: Teks -->
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight">Deploy faster</h2>
+            <p class="text-gray-500 mt-4 text-lg">
+              Everything you need to deploy your app
+            </p>
+            <p class="text-gray-500 mt-4 leading-relaxed">
+              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
+              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
+              at. In mi viverra elit nunc.
+            </p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex gap-3 items-start">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path></svg
+                >
+                <span class="text-gray-600"
+                  >Morbi viverra dui mi arcu sed. Tellus semper adipiscing
+                  suspendisse semper morbi.</span
+                >
+              </li>
+              <li class="flex gap-3 items-start">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path></svg
+                >
+                <span class="text-gray-600"
+                  >Sit quis amet rutrum tellus ullamcorper ultricies libero
+                  dolor eget.</span
+                >
+              </li>
+              <li class="flex gap-3 items-start">
+                <svg
+                  class="w-5 h-5 text-blue-500 mt-1 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path></svg
+                >
+                <span class="text-gray-600"
+                  >Quisque est vel vulputate cursus. Risus proin diam nunc
+                  commodo.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kanan: Statistik dengan angka besar -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+          >
+            <h3 class="font-semibold text-gray-900 text-xl mb-6">
+              Work with us
+            </h3>
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <div class="text-3xl font-bold gradient-text">12</div>
+                <div class="text-gray-500 text-sm">Offices worldwide</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold gradient-text">300+</div>
+                <div class="text-gray-500 text-sm">Full-time colleagues</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold gradient-text">40</div>
+                <div class="text-gray-500 text-sm">Hours per week</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold gradient-text">Unlimited</div>
+                <div class="text-gray-500 text-sm">Paid time off</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter (sesuai home) -->
+    <section class="py-20 px-6">
+      <div class="container mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight">
+          Subscribe to our newsletter
+        </h2>
+        <p class="text-gray-500 mt-4">
+          Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
+          velit quis. Duis tempor incididunt dolore.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="px-5 py-3 border border-gray-300 rounded-lg flex-1 max-w-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            class="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition shadow-sm"
+            >Subscribe</button
+          >
+        </div>
+        <div class="flex gap-6 justify-center mt-8 text-sm text-gray-500">
+          <span class="flex items-center gap-1">✓ Weekly articles</span>
+          <span class="flex items-center gap-1">✓ No spam</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer sederhana -->
+    <Footer />
+  </body>
+</html>
